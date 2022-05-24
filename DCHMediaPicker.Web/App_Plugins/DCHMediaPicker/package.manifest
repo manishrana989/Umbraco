@@ -1,0 +1,11 @@
+﻿{
+  "javascript": [
+    "~/App_Plugins/DCHMediaPicker/js/dchmediapicker.controller.js",
+    "~/App_Plugins/DCHMediaPicker/js/dchmediapicker.dialog.controller.js",
+    "~/App_Plugins/DCHMediaPicker/js/dchmediapicker.dashboard.controller.js",
+    "~/App_Plugins/DCHMediaPicker/js/dchmediapicker.resources.js"
+  ],
+  "css": [
+    "~/App_Plugins/DCHMediaPicker/css/editor.css"
+  ]
+}

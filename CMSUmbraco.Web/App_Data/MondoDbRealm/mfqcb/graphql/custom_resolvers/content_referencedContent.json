@@ -1,0 +1,8 @@
+{
+  "field_name": "referencedContent",
+  "function_name": "referencedContentResolver",
+  "input_type_format": "",
+  "on_type": "Content",
+  "payload_type": "Content",
+  "payload_type_format": "generated-list"
+}

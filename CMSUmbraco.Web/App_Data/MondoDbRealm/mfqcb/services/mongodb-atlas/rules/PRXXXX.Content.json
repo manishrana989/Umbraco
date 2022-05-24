@@ -1,0 +1,2051 @@
+{
+  "collection": "Content",
+  "database": "PRXXXX",
+  "roles": [
+    {
+      "name": "default",
+      "apply_when": {},
+      "read": true,
+      "insert": false,
+      "delete": false,
+      "search": true,
+      "additional_fields": {}
+    }
+  ],
+  "schema": {
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "categories": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "objectId"
+        },
+        "title": "topCategories"
+      },
+      "contentType": {
+        "bsonType": "string"
+      },
+      "fields": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "alias": {
+              "bsonType": "string"
+            },
+            "blocks": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "_id": {
+                    "bsonType": "objectId"
+                  },
+                  "contentType": {
+                    "bsonType": "string"
+                  },
+                  "fields": {
+                    "bsonType": "array",
+                    "items": {
+                      "bsonType": "object",
+                      "properties": {
+                        "alias": {
+                          "bsonType": "string"
+                        },
+                        "blocks": {
+                          "bsonType": "array",
+                          "items": {
+                            "bsonType": "object",
+                            "properties": {
+                              "_id": {
+                                "bsonType": "objectId"
+                              },
+                              "contentType": {
+                                "bsonType": "string"
+                              },
+                              "fields": {
+                                "bsonType": "array",
+                                "items": {
+                                  "bsonType": "object",
+                                  "properties": {
+                                    "alias": {
+                                      "bsonType": "string"
+                                    },
+                                    "blocks": {
+                                      "bsonType": "array",
+                                      "items": {
+                                        "bsonType": "object",
+                                        "properties": {
+                                          "_id": {
+                                            "bsonType": "objectId"
+                                          },
+                                          "contentType": {
+                                            "bsonType": "string"
+                                          },
+                                          "fields": {
+                                            "bsonType": "array",
+                                            "items": {
+                                              "bsonType": "object",
+                                              "properties": {
+                                                "alias": {
+                                                  "bsonType": "string"
+                                                },
+                                                "blocks": {
+                                                  "bsonType": "array",
+                                                  "items": {
+                                                    "bsonType": "object",
+                                                    "properties": {
+                                                      "_id": {
+                                                        "bsonType": "objectId"
+                                                      },
+                                                      "contentType": {
+                                                        "bsonType": "string"
+                                                      },
+                                                      "fields": {
+                                                        "bsonType": "array",
+                                                        "items": {
+                                                          "bsonType": "object",
+                                                          "properties": {
+                                                            "alias": {
+                                                              "bsonType": "string"
+                                                            },
+                                                            "blocks": {
+                                                              "bsonType": "array",
+                                                              "items": {
+                                                                "bsonType": "object",
+                                                                "properties": {
+                                                                  "_id": {
+                                                                    "bsonType": "objectId"
+                                                                  },
+                                                                  "contentType": {
+                                                                    "bsonType": "string"
+                                                                  },
+                                                                  "fields": {
+                                                                    "bsonType": "array",
+                                                                    "items": {
+                                                                      "bsonType": "object",
+                                                                      "properties": {
+                                                                        "alias": {
+                                                                          "bsonType": "string"
+                                                                        },
+                                                                        "blocks": {
+                                                                          "bsonType": "array",
+                                                                          "items": {
+                                                                            "bsonType": "object",
+                                                                            "properties": {
+                                                                              "_id": {
+                                                                                "bsonType": "objectId"
+                                                                              },
+                                                                              "contentType": {
+                                                                                "bsonType": "string"
+                                                                              },
+                                                                              "fields": {
+                                                                                "bsonType": "array",
+                                                                                "items": {
+                                                                                  "bsonType": "object",
+                                                                                  "properties": {
+                                                                                    "alias": {
+                                                                                      "bsonType": "string"
+                                                                                    },
+                                                                                    "blocks": {
+                                                                                      "bsonType": "array",
+                                                                                      "items": {
+                                                                                        "bsonType": "object",
+                                                                                        "properties": {
+                                                                                          "_id": {
+                                                                                            "bsonType": "objectId"
+                                                                                          },
+                                                                                          "contentType": {
+                                                                                            "bsonType": "string"
+                                                                                          },
+                                                                                          "fields": {
+                                                                                            "bsonType": "array",
+                                                                                            "items": {
+                                                                                              "bsonType": "object",
+                                                                                              "properties": {
+                                                                                                "alias": {
+                                                                                                  "bsonType": "string"
+                                                                                                },
+                                                                                                "blocks": {
+                                                                                                  "bsonType": "array",
+                                                                                                  "items": {
+                                                                                                    "bsonType": "object",
+                                                                                                    "properties": {
+                                                                                                      "_id": {
+                                                                                                        "bsonType": "objectId"
+                                                                                                      },
+                                                                                                      "contentType": {
+                                                                                                        "bsonType": "string"
+                                                                                                      },
+                                                                                                      "fields": {
+                                                                                                        "bsonType": "array",
+                                                                                                        "items": {
+                                                                                                          "bsonType": "object",
+                                                                                                          "properties": {
+                                                                                                            "alias": {
+                                                                                                              "bsonType": "string"
+                                                                                                            },
+                                                                                                            "blocks": {
+                                                                                                              "bsonType": "array",
+                                                                                                              "items": {
+                                                                                                                "bsonType": "object",
+                                                                                                                "properties": {
+                                                                                                                  "_id": {
+                                                                                                                    "bsonType": "objectId"
+                                                                                                                  },
+                                                                                                                  "contentType": {
+                                                                                                                    "bsonType": "string"
+                                                                                                                  },
+                                                                                                                  "fields": {
+                                                                                                                    "bsonType": "array",
+                                                                                                                    "items": {
+                                                                                                                      "bsonType": "object",
+                                                                                                                      "properties": {
+                                                                                                                        "alias": {
+                                                                                                                          "bsonType": "string"
+                                                                                                                        },
+                                                                                                                        "boolean": {
+                                                                                                                          "bsonType": "bool"
+                                                                                                                        },
+                                                                                                                        "content": {
+                                                                                                                          "bsonType": "object",
+                                                                                                                          "properties": {
+                                                                                                                            "_id": {
+                                                                                                                              "bsonType": "objectId"
+                                                                                                                            },
+                                                                                                                            "contentType": {
+                                                                                                                              "bsonType": "string"
+                                                                                                                            },
+                                                                                                                            "key": {
+                                                                                                                              "bsonType": "string"
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        },
+                                                                                                                        "date": {
+                                                                                                                          "bsonType": "date"
+                                                                                                                        },
+                                                                                                                        "decimal": {
+                                                                                                                          "bsonType": "decimal"
+                                                                                                                        },
+                                                                                                                        "editor": {
+                                                                                                                          "bsonType": "string"
+                                                                                                                        },
+                                                                                                                        "html": {
+                                                                                                                          "bsonType": "string"
+                                                                                                                        },
+                                                                                                                        "link": {
+                                                                                                                          "bsonType": "object",
+                                                                                                                          "properties": {
+                                                                                                                            "name": {
+                                                                                                                              "bsonType": "string"
+                                                                                                                            },
+                                                                                                                            "udi": {
+                                                                                                                              "bsonType": "string"
+                                                                                                                            },
+                                                                                                                            "url": {
+                                                                                                                              "bsonType": "string"
+                                                                                                                            },
+                                                                                                                            "query": {
+                                                                                                                              "bsonType": "string"
+                                                                                                                            },
+                                                                                                                            "fragment": {
+                                                                                                                              "bsonType": "string"
+                                                                                                                            },
+                                                                                                                            "target": {
+                                                                                                                              "bsonType": "string"
+                                                                                                                            },
+                                                                                                                            "contentId": {
+                                                                                                                              "bsonType": "objectId"
+                                                                                                                            },
+                                                                                                                            "mediaId": {
+                                                                                                                              "bsonType": "objectId"
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        },
+                                                                                                                        "contentList": {
+                                                                                                                          "bsonType": "array",
+                                                                                                                          "items": {
+                                                                                                                            "bsonType": "object",
+                                                                                                                            "properties": {
+                                                                                                                              "_id": {
+                                                                                                                                "bsonType": "objectId"
+                                                                                                                              },
+                                                                                                                              "contentType": {
+                                                                                                                                "bsonType": "string"
+                                                                                                                              },
+                                                                                                                              "key": {
+                                                                                                                                "bsonType": "string"
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        },
+                                                                                                                        "list": {
+                                                                                                                          "bsonType": "array",
+                                                                                                                          "items": {
+                                                                                                                            "bsonType": "object",
+                                                                                                                            "properties": {
+                                                                                                                              "_id": {
+                                                                                                                                "bsonType": "objectId"
+                                                                                                                              },
+                                                                                                                              "contentType": {
+                                                                                                                                "bsonType": "string"
+                                                                                                                              },
+                                                                                                                              "key": {
+                                                                                                                                "bsonType": "string"
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        },
+                                                                                                                        "map": {
+                                                                                                                          "bsonType": "object",
+                                                                                                                          "properties": {
+                                                                                                                            "address": {
+                                                                                                                              "bsonType": "object",
+                                                                                                                              "properties": {
+                                                                                                                                "city": {
+                                                                                                                                  "bsonType": "string"
+                                                                                                                                },
+                                                                                                                                "country": {
+                                                                                                                                  "bsonType": "string"
+                                                                                                                                },
+                                                                                                                                "fullAddress": {
+                                                                                                                                  "bsonType": "string"
+                                                                                                                                },
+                                                                                                                                "lat": {
+                                                                                                                                  "bsonType": "decimal"
+                                                                                                                                },
+                                                                                                                                "lng": {
+                                                                                                                                  "bsonType": "decimal"
+                                                                                                                                },
+                                                                                                                                "postalCode": {
+                                                                                                                                  "bsonType": "string"
+                                                                                                                                },
+                                                                                                                                "state": {
+                                                                                                                                  "bsonType": "string"
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                            },
+                                                                                                                            "mapConfig": {
+                                                                                                                              "bsonType": "object",
+                                                                                                                              "properties": {
+                                                                                                                                "lat": {
+                                                                                                                                  "bsonType": "decimal"
+                                                                                                                                },
+                                                                                                                                "lng": {
+                                                                                                                                  "bsonType": "decimal"
+                                                                                                                                },
+                                                                                                                                "zoom": {
+                                                                                                                                  "bsonType": "int"
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        },
+                                                                                                                        "mediaList": {
+                                                                                                                          "bsonType": "array",
+                                                                                                                          "items": {
+                                                                                                                            "bsonType": "object",
+                                                                                                                            "properties": {
+                                                                                                                              "_id": {
+                                                                                                                                "bsonType": "objectId"
+                                                                                                                              },
+                                                                                                                              "contentType": {
+                                                                                                                                "bsonType": "string"
+                                                                                                                              },
+                                                                                                                              "altText": {
+                                                                                                                                "bsonType": "string"
+                                                                                                                              },
+                                                                                                                              "optionsJson": {
+                                                                                                                                "bsonType": "string"
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        },
+                                                                                                                        "number": {
+                                                                                                                          "bsonType": "int"
+                                                                                                                        },
+                                                                                                                        "text": {
+                                                                                                                          "bsonType": "string"
+                                                                                                                        },
+                                                                                                                        "textList": {
+                                                                                                                          "bsonType": "array",
+                                                                                                                          "items": {
+                                                                                                                            "bsonType": "string"
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  },
+                                                                                                                  "key": {
+                                                                                                                    "bsonType": "string"
+                                                                                                                  },
+                                                                                                                  "settingsType": {
+                                                                                                                    "bsonType": "string"
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "boolean": {
+                                                                                                              "bsonType": "bool"
+                                                                                                            },
+                                                                                                            "content": {
+                                                                                                              "bsonType": "object",
+                                                                                                              "properties": {
+                                                                                                                "_id": {
+                                                                                                                  "bsonType": "objectId"
+                                                                                                                },
+                                                                                                                "contentType": {
+                                                                                                                  "bsonType": "string"
+                                                                                                                },
+                                                                                                                "key": {
+                                                                                                                  "bsonType": "string"
+                                                                                                                }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "date": {
+                                                                                                              "bsonType": "date"
+                                                                                                            },
+                                                                                                            "decimal": {
+                                                                                                              "bsonType": "decimal"
+                                                                                                            },
+                                                                                                            "editor": {
+                                                                                                              "bsonType": "string"
+                                                                                                            },
+                                                                                                            "html": {
+                                                                                                              "bsonType": "string"
+                                                                                                            },
+                                                                                                            "link": {
+                                                                                                              "bsonType": "object",
+                                                                                                              "properties": {
+                                                                                                                "name": {
+                                                                                                                  "bsonType": "string"
+                                                                                                                },
+                                                                                                                "udi": {
+                                                                                                                  "bsonType": "string"
+                                                                                                                },
+                                                                                                                "url": {
+                                                                                                                  "bsonType": "string"
+                                                                                                                },
+                                                                                                                "query": {
+                                                                                                                  "bsonType": "string"
+                                                                                                                },
+                                                                                                                "fragment": {
+                                                                                                                  "bsonType": "string"
+                                                                                                                },
+                                                                                                                "target": {
+                                                                                                                  "bsonType": "string"
+                                                                                                                },
+                                                                                                                "contentId": {
+                                                                                                                  "bsonType": "objectId"
+                                                                                                                },
+                                                                                                                "mediaId": {
+                                                                                                                  "bsonType": "objectId"
+                                                                                                                }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "contentList": {
+                                                                                                              "bsonType": "array",
+                                                                                                              "items": {
+                                                                                                                "bsonType": "object",
+                                                                                                                "properties": {
+                                                                                                                  "_id": {
+                                                                                                                    "bsonType": "objectId"
+                                                                                                                  },
+                                                                                                                  "contentType": {
+                                                                                                                    "bsonType": "string"
+                                                                                                                  },
+                                                                                                                  "key": {
+                                                                                                                    "bsonType": "string"
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "list": {
+                                                                                                              "bsonType": "array",
+                                                                                                              "items": {
+                                                                                                                "bsonType": "object",
+                                                                                                                "properties": {
+                                                                                                                  "_id": {
+                                                                                                                    "bsonType": "objectId"
+                                                                                                                  },
+                                                                                                                  "contentType": {
+                                                                                                                    "bsonType": "string"
+                                                                                                                  },
+                                                                                                                  "key": {
+                                                                                                                    "bsonType": "string"
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "map": {
+                                                                                                              "bsonType": "object",
+                                                                                                              "properties": {
+                                                                                                                "address": {
+                                                                                                                  "bsonType": "object",
+                                                                                                                  "properties": {
+                                                                                                                    "city": {
+                                                                                                                      "bsonType": "string"
+                                                                                                                    },
+                                                                                                                    "country": {
+                                                                                                                      "bsonType": "string"
+                                                                                                                    },
+                                                                                                                    "fullAddress": {
+                                                                                                                      "bsonType": "string"
+                                                                                                                    },
+                                                                                                                    "lat": {
+                                                                                                                      "bsonType": "decimal"
+                                                                                                                    },
+                                                                                                                    "lng": {
+                                                                                                                      "bsonType": "decimal"
+                                                                                                                    },
+                                                                                                                    "postalCode": {
+                                                                                                                      "bsonType": "string"
+                                                                                                                    },
+                                                                                                                    "state": {
+                                                                                                                      "bsonType": "string"
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                },
+                                                                                                                "mapConfig": {
+                                                                                                                  "bsonType": "object",
+                                                                                                                  "properties": {
+                                                                                                                    "lat": {
+                                                                                                                      "bsonType": "decimal"
+                                                                                                                    },
+                                                                                                                    "lng": {
+                                                                                                                      "bsonType": "decimal"
+                                                                                                                    },
+                                                                                                                    "zoom": {
+                                                                                                                      "bsonType": "int"
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "mediaList": {
+                                                                                                              "bsonType": "array",
+                                                                                                              "items": {
+                                                                                                                "bsonType": "object",
+                                                                                                                "properties": {
+                                                                                                                  "_id": {
+                                                                                                                    "bsonType": "objectId"
+                                                                                                                  },
+                                                                                                                  "contentType": {
+                                                                                                                    "bsonType": "string"
+                                                                                                                  },
+                                                                                                                  "altText": {
+                                                                                                                    "bsonType": "string"
+                                                                                                                  },
+                                                                                                                  "optionsJson": {
+                                                                                                                    "bsonType": "string"
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "number": {
+                                                                                                              "bsonType": "int"
+                                                                                                            },
+                                                                                                            "text": {
+                                                                                                              "bsonType": "string"
+                                                                                                            },
+                                                                                                            "textList": {
+                                                                                                              "bsonType": "array",
+                                                                                                              "items": {
+                                                                                                                "bsonType": "string"
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      },
+                                                                                                      "key": {
+                                                                                                        "bsonType": "string"
+                                                                                                      },
+                                                                                                      "settingsType": {
+                                                                                                        "bsonType": "string"
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                },
+                                                                                                "boolean": {
+                                                                                                  "bsonType": "bool"
+                                                                                                },
+                                                                                                "content": {
+                                                                                                  "bsonType": "object",
+                                                                                                  "properties": {
+                                                                                                    "_id": {
+                                                                                                      "bsonType": "objectId"
+                                                                                                    },
+                                                                                                    "contentType": {
+                                                                                                      "bsonType": "string"
+                                                                                                    },
+                                                                                                    "key": {
+                                                                                                      "bsonType": "string"
+                                                                                                    }
+                                                                                                  }
+                                                                                                },
+                                                                                                "date": {
+                                                                                                  "bsonType": "date"
+                                                                                                },
+                                                                                                "decimal": {
+                                                                                                  "bsonType": "decimal"
+                                                                                                },
+                                                                                                "editor": {
+                                                                                                  "bsonType": "string"
+                                                                                                },
+                                                                                                "html": {
+                                                                                                  "bsonType": "string"
+                                                                                                },
+                                                                                                "link": {
+                                                                                                  "bsonType": "object",
+                                                                                                  "properties": {
+                                                                                                    "name": {
+                                                                                                      "bsonType": "string"
+                                                                                                    },
+                                                                                                    "udi": {
+                                                                                                      "bsonType": "string"
+                                                                                                    },
+                                                                                                    "url": {
+                                                                                                      "bsonType": "string"
+                                                                                                    },
+                                                                                                    "query": {
+                                                                                                      "bsonType": "string"
+                                                                                                    },
+                                                                                                    "fragment": {
+                                                                                                      "bsonType": "string"
+                                                                                                    },
+                                                                                                    "target": {
+                                                                                                      "bsonType": "string"
+                                                                                                    },
+                                                                                                    "contentId": {
+                                                                                                      "bsonType": "objectId"
+                                                                                                    },
+                                                                                                    "mediaId": {
+                                                                                                      "bsonType": "objectId"
+                                                                                                    }
+                                                                                                  }
+                                                                                                },
+                                                                                                "contentList": {
+                                                                                                  "bsonType": "array",
+                                                                                                  "items": {
+                                                                                                    "bsonType": "object",
+                                                                                                    "properties": {
+                                                                                                      "_id": {
+                                                                                                        "bsonType": "objectId"
+                                                                                                      },
+                                                                                                      "contentType": {
+                                                                                                        "bsonType": "string"
+                                                                                                      },
+                                                                                                      "key": {
+                                                                                                        "bsonType": "string"
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                },
+                                                                                                "list": {
+                                                                                                  "bsonType": "array",
+                                                                                                  "items": {
+                                                                                                    "bsonType": "object",
+                                                                                                    "properties": {
+                                                                                                      "_id": {
+                                                                                                        "bsonType": "objectId"
+                                                                                                      },
+                                                                                                      "contentType": {
+                                                                                                        "bsonType": "string"
+                                                                                                      },
+                                                                                                      "key": {
+                                                                                                        "bsonType": "string"
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                },
+                                                                                                "map": {
+                                                                                                  "bsonType": "object",
+                                                                                                  "properties": {
+                                                                                                    "address": {
+                                                                                                      "bsonType": "object",
+                                                                                                      "properties": {
+                                                                                                        "city": {
+                                                                                                          "bsonType": "string"
+                                                                                                        },
+                                                                                                        "country": {
+                                                                                                          "bsonType": "string"
+                                                                                                        },
+                                                                                                        "fullAddress": {
+                                                                                                          "bsonType": "string"
+                                                                                                        },
+                                                                                                        "lat": {
+                                                                                                          "bsonType": "decimal"
+                                                                                                        },
+                                                                                                        "lng": {
+                                                                                                          "bsonType": "decimal"
+                                                                                                        },
+                                                                                                        "postalCode": {
+                                                                                                          "bsonType": "string"
+                                                                                                        },
+                                                                                                        "state": {
+                                                                                                          "bsonType": "string"
+                                                                                                        }
+                                                                                                      }
+                                                                                                    },
+                                                                                                    "mapConfig": {
+                                                                                                      "bsonType": "object",
+                                                                                                      "properties": {
+                                                                                                        "lat": {
+                                                                                                          "bsonType": "decimal"
+                                                                                                        },
+                                                                                                        "lng": {
+                                                                                                          "bsonType": "decimal"
+                                                                                                        },
+                                                                                                        "zoom": {
+                                                                                                          "bsonType": "int"
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                },
+                                                                                                "mediaList": {
+                                                                                                  "bsonType": "array",
+                                                                                                  "items": {
+                                                                                                    "bsonType": "object",
+                                                                                                    "properties": {
+                                                                                                      "_id": {
+                                                                                                        "bsonType": "objectId"
+                                                                                                      },
+                                                                                                      "contentType": {
+                                                                                                        "bsonType": "string"
+                                                                                                      },
+                                                                                                      "altText": {
+                                                                                                        "bsonType": "string"
+                                                                                                      },
+                                                                                                      "optionsJson": {
+                                                                                                        "bsonType": "string"
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                },
+                                                                                                "number": {
+                                                                                                  "bsonType": "int"
+                                                                                                },
+                                                                                                "text": {
+                                                                                                  "bsonType": "string"
+                                                                                                },
+                                                                                                "textList": {
+                                                                                                  "bsonType": "array",
+                                                                                                  "items": {
+                                                                                                    "bsonType": "string"
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          },
+                                                                                          "key": {
+                                                                                            "bsonType": "string"
+                                                                                          },
+                                                                                          "settingsType": {
+                                                                                            "bsonType": "string"
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    },
+                                                                                    "boolean": {
+                                                                                      "bsonType": "bool"
+                                                                                    },
+                                                                                    "content": {
+                                                                                      "bsonType": "object",
+                                                                                      "properties": {
+                                                                                        "_id": {
+                                                                                          "bsonType": "objectId"
+                                                                                        },
+                                                                                        "contentType": {
+                                                                                          "bsonType": "string"
+                                                                                        },
+                                                                                        "key": {
+                                                                                          "bsonType": "string"
+                                                                                        }
+                                                                                      }
+                                                                                    },
+                                                                                    "date": {
+                                                                                      "bsonType": "date"
+                                                                                    },
+                                                                                    "decimal": {
+                                                                                      "bsonType": "decimal"
+                                                                                    },
+                                                                                    "editor": {
+                                                                                      "bsonType": "string"
+                                                                                    },
+                                                                                    "html": {
+                                                                                      "bsonType": "string"
+                                                                                    },
+                                                                                    "link": {
+                                                                                      "bsonType": "object",
+                                                                                      "properties": {
+                                                                                        "name": {
+                                                                                          "bsonType": "string"
+                                                                                        },
+                                                                                        "udi": {
+                                                                                          "bsonType": "string"
+                                                                                        },
+                                                                                        "url": {
+                                                                                          "bsonType": "string"
+                                                                                        },
+                                                                                        "query": {
+                                                                                          "bsonType": "string"
+                                                                                        },
+                                                                                        "fragment": {
+                                                                                          "bsonType": "string"
+                                                                                        },
+                                                                                        "target": {
+                                                                                          "bsonType": "string"
+                                                                                        },
+                                                                                        "contentId": {
+                                                                                          "bsonType": "objectId"
+                                                                                        },
+                                                                                        "mediaId": {
+                                                                                          "bsonType": "objectId"
+                                                                                        }
+                                                                                      }
+                                                                                    },
+                                                                                    "contentList": {
+                                                                                      "bsonType": "array",
+                                                                                      "items": {
+                                                                                        "bsonType": "object",
+                                                                                        "properties": {
+                                                                                          "_id": {
+                                                                                            "bsonType": "objectId"
+                                                                                          },
+                                                                                          "contentType": {
+                                                                                            "bsonType": "string"
+                                                                                          },
+                                                                                          "key": {
+                                                                                            "bsonType": "string"
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    },
+                                                                                    "list": {
+                                                                                      "bsonType": "array",
+                                                                                      "items": {
+                                                                                        "bsonType": "object",
+                                                                                        "properties": {
+                                                                                          "_id": {
+                                                                                            "bsonType": "objectId"
+                                                                                          },
+                                                                                          "contentType": {
+                                                                                            "bsonType": "string"
+                                                                                          },
+                                                                                          "key": {
+                                                                                            "bsonType": "string"
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    },
+                                                                                    "map": {
+                                                                                      "bsonType": "object",
+                                                                                      "properties": {
+                                                                                        "address": {
+                                                                                          "bsonType": "object",
+                                                                                          "properties": {
+                                                                                            "city": {
+                                                                                              "bsonType": "string"
+                                                                                            },
+                                                                                            "country": {
+                                                                                              "bsonType": "string"
+                                                                                            },
+                                                                                            "fullAddress": {
+                                                                                              "bsonType": "string"
+                                                                                            },
+                                                                                            "lat": {
+                                                                                              "bsonType": "decimal"
+                                                                                            },
+                                                                                            "lng": {
+                                                                                              "bsonType": "decimal"
+                                                                                            },
+                                                                                            "postalCode": {
+                                                                                              "bsonType": "string"
+                                                                                            },
+                                                                                            "state": {
+                                                                                              "bsonType": "string"
+                                                                                            }
+                                                                                          }
+                                                                                        },
+                                                                                        "mapConfig": {
+                                                                                          "bsonType": "object",
+                                                                                          "properties": {
+                                                                                            "lat": {
+                                                                                              "bsonType": "decimal"
+                                                                                            },
+                                                                                            "lng": {
+                                                                                              "bsonType": "decimal"
+                                                                                            },
+                                                                                            "zoom": {
+                                                                                              "bsonType": "int"
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    },
+                                                                                    "mediaList": {
+                                                                                      "bsonType": "array",
+                                                                                      "items": {
+                                                                                        "bsonType": "object",
+                                                                                        "properties": {
+                                                                                          "_id": {
+                                                                                            "bsonType": "objectId"
+                                                                                          },
+                                                                                          "contentType": {
+                                                                                            "bsonType": "string"
+                                                                                          },
+                                                                                          "altText": {
+                                                                                            "bsonType": "string"
+                                                                                          },
+                                                                                          "optionsJson": {
+                                                                                            "bsonType": "string"
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    },
+                                                                                    "number": {
+                                                                                      "bsonType": "int"
+                                                                                    },
+                                                                                    "text": {
+                                                                                      "bsonType": "string"
+                                                                                    },
+                                                                                    "textList": {
+                                                                                      "bsonType": "array",
+                                                                                      "items": {
+                                                                                        "bsonType": "string"
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "key": {
+                                                                                "bsonType": "string"
+                                                                              },
+                                                                              "settingsType": {
+                                                                                "bsonType": "string"
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        },
+                                                                        "boolean": {
+                                                                          "bsonType": "bool"
+                                                                        },
+                                                                        "content": {
+                                                                          "bsonType": "object",
+                                                                          "properties": {
+                                                                            "_id": {
+                                                                              "bsonType": "objectId"
+                                                                            },
+                                                                            "contentType": {
+                                                                              "bsonType": "string"
+                                                                            },
+                                                                            "key": {
+                                                                              "bsonType": "string"
+                                                                            }
+                                                                          }
+                                                                        },
+                                                                        "date": {
+                                                                          "bsonType": "date"
+                                                                        },
+                                                                        "decimal": {
+                                                                          "bsonType": "decimal"
+                                                                        },
+                                                                        "editor": {
+                                                                          "bsonType": "string"
+                                                                        },
+                                                                        "html": {
+                                                                          "bsonType": "string"
+                                                                        },
+                                                                        "link": {
+                                                                          "bsonType": "object",
+                                                                          "properties": {
+                                                                            "name": {
+                                                                              "bsonType": "string"
+                                                                            },
+                                                                            "udi": {
+                                                                              "bsonType": "string"
+                                                                            },
+                                                                            "url": {
+                                                                              "bsonType": "string"
+                                                                            },
+                                                                            "query": {
+                                                                              "bsonType": "string"
+                                                                            },
+                                                                            "fragment": {
+                                                                              "bsonType": "string"
+                                                                            },
+                                                                            "target": {
+                                                                              "bsonType": "string"
+                                                                            },
+                                                                            "contentId": {
+                                                                              "bsonType": "objectId"
+                                                                            },
+                                                                            "mediaId": {
+                                                                              "bsonType": "objectId"
+                                                                            }
+                                                                          }
+                                                                        },
+                                                                        "contentList": {
+                                                                          "bsonType": "array",
+                                                                          "items": {
+                                                                            "bsonType": "object",
+                                                                            "properties": {
+                                                                              "_id": {
+                                                                                "bsonType": "objectId"
+                                                                              },
+                                                                              "contentType": {
+                                                                                "bsonType": "string"
+                                                                              },
+                                                                              "key": {
+                                                                                "bsonType": "string"
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        },
+                                                                        "list": {
+                                                                          "bsonType": "array",
+                                                                          "items": {
+                                                                            "bsonType": "object",
+                                                                            "properties": {
+                                                                              "_id": {
+                                                                                "bsonType": "objectId"
+                                                                              },
+                                                                              "contentType": {
+                                                                                "bsonType": "string"
+                                                                              },
+                                                                              "key": {
+                                                                                "bsonType": "string"
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        },
+                                                                        "map": {
+                                                                          "bsonType": "object",
+                                                                          "properties": {
+                                                                            "address": {
+                                                                              "bsonType": "object",
+                                                                              "properties": {
+                                                                                "city": {
+                                                                                  "bsonType": "string"
+                                                                                },
+                                                                                "country": {
+                                                                                  "bsonType": "string"
+                                                                                },
+                                                                                "fullAddress": {
+                                                                                  "bsonType": "string"
+                                                                                },
+                                                                                "lat": {
+                                                                                  "bsonType": "decimal"
+                                                                                },
+                                                                                "lng": {
+                                                                                  "bsonType": "decimal"
+                                                                                },
+                                                                                "postalCode": {
+                                                                                  "bsonType": "string"
+                                                                                },
+                                                                                "state": {
+                                                                                  "bsonType": "string"
+                                                                                }
+                                                                              }
+                                                                            },
+                                                                            "mapConfig": {
+                                                                              "bsonType": "object",
+                                                                              "properties": {
+                                                                                "lat": {
+                                                                                  "bsonType": "decimal"
+                                                                                },
+                                                                                "lng": {
+                                                                                  "bsonType": "decimal"
+                                                                                },
+                                                                                "zoom": {
+                                                                                  "bsonType": "int"
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        },
+                                                                        "mediaList": {
+                                                                          "bsonType": "array",
+                                                                          "items": {
+                                                                            "bsonType": "object",
+                                                                            "properties": {
+                                                                              "_id": {
+                                                                                "bsonType": "objectId"
+                                                                              },
+                                                                              "contentType": {
+                                                                                "bsonType": "string"
+                                                                              },
+                                                                              "altText": {
+                                                                                "bsonType": "string"
+                                                                              },
+                                                                              "optionsJson": {
+                                                                                "bsonType": "string"
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        },
+                                                                        "number": {
+                                                                          "bsonType": "int"
+                                                                        },
+                                                                        "text": {
+                                                                          "bsonType": "string"
+                                                                        },
+                                                                        "textList": {
+                                                                          "bsonType": "array",
+                                                                          "items": {
+                                                                            "bsonType": "string"
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  },
+                                                                  "key": {
+                                                                    "bsonType": "string"
+                                                                  },
+                                                                  "settingsType": {
+                                                                    "bsonType": "string"
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
+                                                            "boolean": {
+                                                              "bsonType": "bool"
+                                                            },
+                                                            "content": {
+                                                              "bsonType": "object",
+                                                              "properties": {
+                                                                "_id": {
+                                                                  "bsonType": "objectId"
+                                                                },
+                                                                "contentType": {
+                                                                  "bsonType": "string"
+                                                                },
+                                                                "key": {
+                                                                  "bsonType": "string"
+                                                                }
+                                                              }
+                                                            },
+                                                            "date": {
+                                                              "bsonType": "date"
+                                                            },
+                                                            "decimal": {
+                                                              "bsonType": "decimal"
+                                                            },
+                                                            "editor": {
+                                                              "bsonType": "string"
+                                                            },
+                                                            "html": {
+                                                              "bsonType": "string"
+                                                            },
+                                                            "link": {
+                                                              "bsonType": "object",
+                                                              "properties": {
+                                                                "name": {
+                                                                  "bsonType": "string"
+                                                                },
+                                                                "udi": {
+                                                                  "bsonType": "string"
+                                                                },
+                                                                "url": {
+                                                                  "bsonType": "string"
+                                                                },
+                                                                "query": {
+                                                                  "bsonType": "string"
+                                                                },
+                                                                "fragment": {
+                                                                  "bsonType": "string"
+                                                                },
+                                                                "target": {
+                                                                  "bsonType": "string"
+                                                                },
+                                                                "contentId": {
+                                                                  "bsonType": "objectId"
+                                                                },
+                                                                "mediaId": {
+                                                                  "bsonType": "objectId"
+                                                                }
+                                                              }
+                                                            },
+                                                            "contentList": {
+                                                              "bsonType": "array",
+                                                              "items": {
+                                                                "bsonType": "object",
+                                                                "properties": {
+                                                                  "_id": {
+                                                                    "bsonType": "objectId"
+                                                                  },
+                                                                  "contentType": {
+                                                                    "bsonType": "string"
+                                                                  },
+                                                                  "key": {
+                                                                    "bsonType": "string"
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
+                                                            "list": {
+                                                              "bsonType": "array",
+                                                              "items": {
+                                                                "bsonType": "object",
+                                                                "properties": {
+                                                                  "_id": {
+                                                                    "bsonType": "objectId"
+                                                                  },
+                                                                  "contentType": {
+                                                                    "bsonType": "string"
+                                                                  },
+                                                                  "key": {
+                                                                    "bsonType": "string"
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
+                                                            "map": {
+                                                              "bsonType": "object",
+                                                              "properties": {
+                                                                "address": {
+                                                                  "bsonType": "object",
+                                                                  "properties": {
+                                                                    "city": {
+                                                                      "bsonType": "string"
+                                                                    },
+                                                                    "country": {
+                                                                      "bsonType": "string"
+                                                                    },
+                                                                    "fullAddress": {
+                                                                      "bsonType": "string"
+                                                                    },
+                                                                    "lat": {
+                                                                      "bsonType": "decimal"
+                                                                    },
+                                                                    "lng": {
+                                                                      "bsonType": "decimal"
+                                                                    },
+                                                                    "postalCode": {
+                                                                      "bsonType": "string"
+                                                                    },
+                                                                    "state": {
+                                                                      "bsonType": "string"
+                                                                    }
+                                                                  }
+                                                                },
+                                                                "mapConfig": {
+                                                                  "bsonType": "object",
+                                                                  "properties": {
+                                                                    "lat": {
+                                                                      "bsonType": "decimal"
+                                                                    },
+                                                                    "lng": {
+                                                                      "bsonType": "decimal"
+                                                                    },
+                                                                    "zoom": {
+                                                                      "bsonType": "int"
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
+                                                            "mediaList": {
+                                                              "bsonType": "array",
+                                                              "items": {
+                                                                "bsonType": "object",
+                                                                "properties": {
+                                                                  "_id": {
+                                                                    "bsonType": "objectId"
+                                                                  },
+                                                                  "contentType": {
+                                                                    "bsonType": "string"
+                                                                  },
+                                                                  "altText": {
+                                                                    "bsonType": "string"
+                                                                  },
+                                                                  "optionsJson": {
+                                                                    "bsonType": "string"
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
+                                                            "number": {
+                                                              "bsonType": "int"
+                                                            },
+                                                            "text": {
+                                                              "bsonType": "string"
+                                                            },
+                                                            "textList": {
+                                                              "bsonType": "array",
+                                                              "items": {
+                                                                "bsonType": "string"
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "key": {
+                                                        "bsonType": "string"
+                                                      },
+                                                      "settingsType": {
+                                                        "bsonType": "string"
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "boolean": {
+                                                  "bsonType": "bool"
+                                                },
+                                                "content": {
+                                                  "bsonType": "object",
+                                                  "properties": {
+                                                    "_id": {
+                                                      "bsonType": "objectId"
+                                                    },
+                                                    "contentType": {
+                                                      "bsonType": "string"
+                                                    },
+                                                    "key": {
+                                                      "bsonType": "string"
+                                                    }
+                                                  }
+                                                },
+                                                "date": {
+                                                  "bsonType": "date"
+                                                },
+                                                "decimal": {
+                                                  "bsonType": "decimal"
+                                                },
+                                                "editor": {
+                                                  "bsonType": "string"
+                                                },
+                                                "html": {
+                                                  "bsonType": "string"
+                                                },
+                                                "link": {
+                                                  "bsonType": "object",
+                                                  "properties": {
+                                                    "name": {
+                                                      "bsonType": "string"
+                                                    },
+                                                    "udi": {
+                                                      "bsonType": "string"
+                                                    },
+                                                    "url": {
+                                                      "bsonType": "string"
+                                                    },
+                                                    "query": {
+                                                      "bsonType": "string"
+                                                    },
+                                                    "fragment": {
+                                                      "bsonType": "string"
+                                                    },
+                                                    "target": {
+                                                      "bsonType": "string"
+                                                    },
+                                                    "contentId": {
+                                                      "bsonType": "objectId"
+                                                    },
+                                                    "mediaId": {
+                                                      "bsonType": "objectId"
+                                                    }
+                                                  }
+                                                },
+                                                "contentList": {
+                                                  "bsonType": "array",
+                                                  "items": {
+                                                    "bsonType": "object",
+                                                    "properties": {
+                                                      "_id": {
+                                                        "bsonType": "objectId"
+                                                      },
+                                                      "contentType": {
+                                                        "bsonType": "string"
+                                                      },
+                                                      "key": {
+                                                        "bsonType": "string"
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "list": {
+                                                  "bsonType": "array",
+                                                  "items": {
+                                                    "bsonType": "object",
+                                                    "properties": {
+                                                      "_id": {
+                                                        "bsonType": "objectId"
+                                                      },
+                                                      "contentType": {
+                                                        "bsonType": "string"
+                                                      },
+                                                      "key": {
+                                                        "bsonType": "string"
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "map": {
+                                                  "bsonType": "object",
+                                                  "properties": {
+                                                    "address": {
+                                                      "bsonType": "object",
+                                                      "properties": {
+                                                        "city": {
+                                                          "bsonType": "string"
+                                                        },
+                                                        "country": {
+                                                          "bsonType": "string"
+                                                        },
+                                                        "fullAddress": {
+                                                          "bsonType": "string"
+                                                        },
+                                                        "lat": {
+                                                          "bsonType": "decimal"
+                                                        },
+                                                        "lng": {
+                                                          "bsonType": "decimal"
+                                                        },
+                                                        "postalCode": {
+                                                          "bsonType": "string"
+                                                        },
+                                                        "state": {
+                                                          "bsonType": "string"
+                                                        }
+                                                      }
+                                                    },
+                                                    "mapConfig": {
+                                                      "bsonType": "object",
+                                                      "properties": {
+                                                        "lat": {
+                                                          "bsonType": "decimal"
+                                                        },
+                                                        "lng": {
+                                                          "bsonType": "decimal"
+                                                        },
+                                                        "zoom": {
+                                                          "bsonType": "int"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "mediaList": {
+                                                  "bsonType": "array",
+                                                  "items": {
+                                                    "bsonType": "object",
+                                                    "properties": {
+                                                      "_id": {
+                                                        "bsonType": "objectId"
+                                                      },
+                                                      "contentType": {
+                                                        "bsonType": "string"
+                                                      },
+                                                      "altText": {
+                                                        "bsonType": "string"
+                                                      },
+                                                      "optionsJson": {
+                                                        "bsonType": "string"
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "number": {
+                                                  "bsonType": "int"
+                                                },
+                                                "text": {
+                                                  "bsonType": "string"
+                                                },
+                                                "textList": {
+                                                  "bsonType": "array",
+                                                  "items": {
+                                                    "bsonType": "string"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "key": {
+                                            "bsonType": "string"
+                                          },
+                                          "settingsType": {
+                                            "bsonType": "string"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "boolean": {
+                                      "bsonType": "bool"
+                                    },
+                                    "content": {
+                                      "bsonType": "object",
+                                      "properties": {
+                                        "_id": {
+                                          "bsonType": "objectId"
+                                        },
+                                        "contentType": {
+                                          "bsonType": "string"
+                                        },
+                                        "key": {
+                                          "bsonType": "string"
+                                        }
+                                      }
+                                    },
+                                    "date": {
+                                      "bsonType": "date"
+                                    },
+                                    "decimal": {
+                                      "bsonType": "decimal"
+                                    },
+                                    "editor": {
+                                      "bsonType": "string"
+                                    },
+                                    "html": {
+                                      "bsonType": "string"
+                                    },
+                                    "link": {
+                                      "bsonType": "object",
+                                      "properties": {
+                                        "name": {
+                                          "bsonType": "string"
+                                        },
+                                        "udi": {
+                                          "bsonType": "string"
+                                        },
+                                        "url": {
+                                          "bsonType": "string"
+                                        },
+                                        "query": {
+                                          "bsonType": "string"
+                                        },
+                                        "fragment": {
+                                          "bsonType": "string"
+                                        },
+                                        "target": {
+                                          "bsonType": "string"
+                                        },
+                                        "contentId": {
+                                          "bsonType": "objectId"
+                                        },
+                                        "mediaId": {
+                                          "bsonType": "objectId"
+                                        }
+                                      }
+                                    },
+                                    "contentList": {
+                                      "bsonType": "array",
+                                      "items": {
+                                        "bsonType": "object",
+                                        "properties": {
+                                          "_id": {
+                                            "bsonType": "objectId"
+                                          },
+                                          "contentType": {
+                                            "bsonType": "string"
+                                          },
+                                          "key": {
+                                            "bsonType": "string"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "list": {
+                                      "bsonType": "array",
+                                      "items": {
+                                        "bsonType": "object",
+                                        "properties": {
+                                          "_id": {
+                                            "bsonType": "objectId"
+                                          },
+                                          "contentType": {
+                                            "bsonType": "string"
+                                          },
+                                          "key": {
+                                            "bsonType": "string"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "map": {
+                                      "bsonType": "object",
+                                      "properties": {
+                                        "address": {
+                                          "bsonType": "object",
+                                          "properties": {
+                                            "city": {
+                                              "bsonType": "string"
+                                            },
+                                            "country": {
+                                              "bsonType": "string"
+                                            },
+                                            "fullAddress": {
+                                              "bsonType": "string"
+                                            },
+                                            "lat": {
+                                              "bsonType": "decimal"
+                                            },
+                                            "lng": {
+                                              "bsonType": "decimal"
+                                            },
+                                            "postalCode": {
+                                              "bsonType": "string"
+                                            },
+                                            "state": {
+                                              "bsonType": "string"
+                                            }
+                                          }
+                                        },
+                                        "mapConfig": {
+                                          "bsonType": "object",
+                                          "properties": {
+                                            "lat": {
+                                              "bsonType": "decimal"
+                                            },
+                                            "lng": {
+                                              "bsonType": "decimal"
+                                            },
+                                            "zoom": {
+                                              "bsonType": "int"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "mediaList": {
+                                      "bsonType": "array",
+                                      "items": {
+                                        "bsonType": "object",
+                                        "properties": {
+                                          "_id": {
+                                            "bsonType": "objectId"
+                                          },
+                                          "contentType": {
+                                            "bsonType": "string"
+                                          },
+                                          "altText": {
+                                            "bsonType": "string"
+                                          },
+                                          "optionsJson": {
+                                            "bsonType": "string"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "number": {
+                                      "bsonType": "int"
+                                    },
+                                    "text": {
+                                      "bsonType": "string"
+                                    },
+                                    "textList": {
+                                      "bsonType": "array",
+                                      "items": {
+                                        "bsonType": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "key": {
+                                "bsonType": "string"
+                              },
+                              "settingsType": {
+                                "bsonType": "string"
+                              }
+                            }
+                          }
+                        },
+                        "boolean": {
+                          "bsonType": "bool"
+                        },
+                        "content": {
+                          "bsonType": "object",
+                          "properties": {
+                            "_id": {
+                              "bsonType": "objectId"
+                            },
+                            "contentType": {
+                              "bsonType": "string"
+                            },
+                            "key": {
+                              "bsonType": "string"
+                            }
+                          }
+                        },
+                        "date": {
+                          "bsonType": "date"
+                        },
+                        "decimal": {
+                          "bsonType": "decimal"
+                        },
+                        "editor": {
+                          "bsonType": "string"
+                        },
+                        "html": {
+                          "bsonType": "string"
+                        },
+                        "link": {
+                          "bsonType": "object",
+                          "properties": {
+                            "name": {
+                              "bsonType": "string"
+                            },
+                            "udi": {
+                              "bsonType": "string"
+                            },
+                            "url": {
+                              "bsonType": "string"
+                            },
+                            "query": {
+                              "bsonType": "string"
+                            },
+                            "fragment": {
+                              "bsonType": "string"
+                            },
+                            "target": {
+                              "bsonType": "string"
+                            },
+                            "contentId": {
+                              "bsonType": "objectId"
+                            },
+                            "mediaId": {
+                              "bsonType": "objectId"
+                            }
+                          }
+                        },
+                        "contentList": {
+                          "bsonType": "array",
+                          "items": {
+                            "bsonType": "object",
+                            "properties": {
+                              "_id": {
+                                "bsonType": "objectId"
+                              },
+                              "contentType": {
+                                "bsonType": "string"
+                              },
+                              "key": {
+                                "bsonType": "string"
+                              }
+                            }
+                          }
+                        },
+                        "list": {
+                          "bsonType": "array",
+                          "items": {
+                            "bsonType": "object",
+                            "properties": {
+                              "_id": {
+                                "bsonType": "objectId"
+                              },
+                              "contentType": {
+                                "bsonType": "string"
+                              },
+                              "key": {
+                                "bsonType": "string"
+                              }
+                            }
+                          }
+                        },
+                        "map": {
+                          "bsonType": "object",
+                          "properties": {
+                            "address": {
+                              "bsonType": "object",
+                              "properties": {
+                                "city": {
+                                  "bsonType": "string"
+                                },
+                                "country": {
+                                  "bsonType": "string"
+                                },
+                                "fullAddress": {
+                                  "bsonType": "string"
+                                },
+                                "lat": {
+                                  "bsonType": "decimal"
+                                },
+                                "lng": {
+                                  "bsonType": "decimal"
+                                },
+                                "postalCode": {
+                                  "bsonType": "string"
+                                },
+                                "state": {
+                                  "bsonType": "string"
+                                }
+                              }
+                            },
+                            "mapConfig": {
+                              "bsonType": "object",
+                              "properties": {
+                                "lat": {
+                                  "bsonType": "decimal"
+                                },
+                                "lng": {
+                                  "bsonType": "decimal"
+                                },
+                                "zoom": {
+                                  "bsonType": "int"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "mediaList": {
+                          "bsonType": "array",
+                          "items": {
+                            "bsonType": "object",
+                            "properties": {
+                              "_id": {
+                                "bsonType": "objectId"
+                              },
+                              "contentType": {
+                                "bsonType": "string"
+                              },
+                              "altText": {
+                                "bsonType": "string"
+                              },
+                              "optionsJson": {
+                                "bsonType": "string"
+                              }
+                            }
+                          }
+                        },
+                        "number": {
+                          "bsonType": "int"
+                        },
+                        "text": {
+                          "bsonType": "string"
+                        },
+                        "textList": {
+                          "bsonType": "array",
+                          "items": {
+                            "bsonType": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "key": {
+                    "bsonType": "string"
+                  },
+                  "settingsType": {
+                    "bsonType": "string"
+                  }
+                }
+              }
+            },
+            "boolean": {
+              "bsonType": "bool"
+            },
+            "content": {
+              "bsonType": "object",
+              "properties": {
+                "_id": {
+                  "bsonType": "objectId"
+                },
+                "contentType": {
+                  "bsonType": "string"
+                },
+                "key": {
+                  "bsonType": "string"
+                }
+              }
+            },
+            "date": {
+              "bsonType": "date"
+            },
+            "decimal": {
+              "bsonType": "decimal"
+            },
+            "editor": {
+              "bsonType": "string"
+            },
+            "html": {
+              "bsonType": "string"
+            },
+            "link": {
+              "bsonType": "object",
+              "properties": {
+                "name": {
+                  "bsonType": "string"
+                },
+                "udi": {
+                  "bsonType": "string"
+                },
+                "url": {
+                  "bsonType": "string"
+                },
+                "query": {
+                  "bsonType": "string"
+                },
+                "fragment": {
+                  "bsonType": "string"
+                },
+                "target": {
+                  "bsonType": "string"
+                },
+                "contentId": {
+                  "bsonType": "objectId"
+                },
+                "mediaId": {
+                  "bsonType": "objectId"
+                }
+              }
+            },
+            "contentList": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "_id": {
+                    "bsonType": "objectId"
+                  },
+                  "contentType": {
+                    "bsonType": "string"
+                  },
+                  "key": {
+                    "bsonType": "string"
+                  }
+                }
+              }
+            },
+            "list": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "_id": {
+                    "bsonType": "objectId"
+                  },
+                  "contentType": {
+                    "bsonType": "string"
+                  },
+                  "key": {
+                    "bsonType": "string"
+                  }
+                }
+              }
+            },
+            "map": {
+              "bsonType": "object",
+              "properties": {
+                "address": {
+                  "bsonType": "object",
+                  "properties": {
+                    "city": {
+                      "bsonType": "string"
+                    },
+                    "country": {
+                      "bsonType": "string"
+                    },
+                    "fullAddress": {
+                      "bsonType": "string"
+                    },
+                    "lat": {
+                      "bsonType": "decimal"
+                    },
+                    "lng": {
+                      "bsonType": "decimal"
+                    },
+                    "postalCode": {
+                      "bsonType": "string"
+                    },
+                    "state": {
+                      "bsonType": "string"
+                    }
+                  }
+                },
+                "mapConfig": {
+                  "bsonType": "object",
+                  "properties": {
+                    "lat": {
+                      "bsonType": "decimal"
+                    },
+                    "lng": {
+                      "bsonType": "decimal"
+                    },
+                    "zoom": {
+                      "bsonType": "int"
+                    }
+                  }
+                }
+              }
+            },
+            "mediaList": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "_id": {
+                    "bsonType": "objectId"
+                  },
+                  "contentType": {
+                    "bsonType": "string"
+                  },
+                  "altText": {
+                    "bsonType": "string"
+                  },
+                  "optionsJson": {
+                    "bsonType": "string"
+                  }
+                }
+              }
+            },
+            "number": {
+              "bsonType": "int"
+            },
+            "text": {
+              "bsonType": "string"
+            },
+            "textList": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              }
+            }
+          }
+        }
+      },
+      "key": {
+        "bsonType": "string"
+      },
+      "level": {
+        "bsonType": "int"
+      },
+      "pageId": {
+        "bsonType": "int"
+      },
+      "parent": {
+        "bsonType": "object",
+        "properties": {
+          "_id": {
+            "bsonType": "objectId"
+          },
+          "key": {
+            "bsonType": "string"
+          },
+          "pageId": {
+            "bsonType": "int"
+          }
+        }
+      },
+      "sortOrder": {
+        "bsonType": "int"
+      },
+      "title": {
+        "bsonType": "string"
+      },
+      "updateDate": {
+        "bsonType": "date"
+      },
+      "url": {
+        "bsonType": "string"
+      },
+      "urlSegment": {
+        "bsonType": "string"
+      }
+    },
+    "title": "Content"
+  }
+}

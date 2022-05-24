@@ -1,0 +1,122 @@
+﻿.tab-selector {
+    text-align: right;
+}
+
+.results {
+    list-style: none;
+    margin-left: 0;
+}
+
+.result {
+    margin: 10px 0;
+    display: flex;
+}
+
+.result img {
+    max-width: 100px;
+}
+
+.result img.small-image{
+    max-width: 50px;
+}
+
+.result .result-label {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.result .result-alttext {
+    display:flex;
+}
+
+.result .result-alttext-label {
+    font-weight: bold;
+    margin-right: 15px;
+    line-height: 31px;
+}
+
+.result .result-alttext-input {
+    flex-grow:1;
+}
+
+.result .result-label .remove {
+    font-weight: normal;
+    font-size: 0.8em;
+}
+
+.result .result-label .result-select {
+    margin-left: 5px;
+}
+
+.result .result-label .result-title {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.result .result-label .result-filename {
+    font-style: italic;
+    font-size: 0.8em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.result .result-label .result-expires,
+.result .result-label .result-page {
+    font-size: 0.8em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.result .result-label .result-input-container {
+    margin-top: 20px;
+}
+
+.result .result-label .result-input-container input {
+    margin: 0;
+}
+
+.no-results {
+    margin-top: 25px;
+}
+
+.paging {
+    list-style: none;
+    margin-left: 0;
+}
+
+.page {
+    display: inline-block;
+    padding: 0 10px 0 0;
+}
+
+.current {
+    font-weight: bold;
+}
+
+.advanced-tab {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.advanced-tab .advanced-control {
+    width: 48%;
+    padding-right: 2%;
+}
+
+.hangfire-wrapper {
+    margin: 0px -20px -30px -20px;
+}
+
+.hangfire-iframe {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.project-selector {
+    max-width: 300px;
+}

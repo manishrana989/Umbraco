@@ -1,0 +1,32 @@
+﻿<div ng-controller="Dare.DCHMediaPicker">
+    <input type="hidden" name="itemCount" ng-model="itemCount" val-property-validator="validate" />
+    <ul ng-model="model.value" class="results">
+        <li ng-repeat="image in model.value track by $index" class="result">
+            <a href="{{image.Url}}" target="_blank">
+                <img class="small-image" ng-if="image.Thumbnail" ng-src="{{image.Thumbnail}}" />
+                <img class="small-image" ng-if="!image.Thumbnail" ng-src="{{image.Url}}" />
+            </a>
+
+            <div class="result-label">
+                <span class="result-title">{{image.Title}} <span class="remove">(<a href="" ng-click="remove($index)" prevent-default>remove</a>)</span></span>
+                <span class="result-filename">{{image.FileName}}</span>
+                <span class="result-alttext">
+                    <span class="result-alttext-label">Alt Text</span>
+                    <span class="result-alttext-input"><input type="text" placeholder="Enter alt text..." class="umb-property-editor umb-textstring" ng-model="image.AltText" /></span>
+                </span>
+
+                <div style="margin-top: 10px">
+                    <umb-button action="options(image)"
+                                type="button"
+                                button-style="['info', 'block']"
+                                label="Image options">
+                    </umb-button>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <a href="" class="umb-node-preview-add" ng-click="add()" prevent-default>
+        <localize key="general_add">Add</localize>
+    </a>
+</div>

@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GlobalCMSUmbraco.ExternalApi</name>
+    </assembly>
+    <members>
+        <member name="M:GlobalCMSUmbraco.ExternalApi.Attributes.JwtBearerTokenAuthorizationAttribute.OnActionExecuting(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            When the attribute is decorated on an Umbraco WebApi Controller
+            </summary>
+            <param name="actionContext"></param>
+        </member>
+        <member name="T:GlobalCMSUmbraco.ExternalApi.Controllers.ProjectsApiController">
+            <summary>
+            Projects CRUD external api
+            </summary>
+        </member>
+        <member name="M:GlobalCMSUmbraco.ExternalApi.Controllers.ProjectsApiController.CreateProject(System.String,System.String)">
+             <summary>
+             Add a new project (Add Step 1)
+             </summary>
+             <remarks>
+             Call this endpoint to create a new project in the targeted environment.
+            
+             If the project is successfully created a `200` response code is returned with a boolean value. If `true` then Realm Apps are enabled in this environment so you should continue with Step 2. If `false` then Realm Apps are disabled so you should go to Step 3. 
+            
+             If the project failed to be created a `400` response code is returned with the reason for the failure.
+             </remarks>
+             <param name="projectCode">Project code, e.g. PR1234</param>
+             <param name="displayName">Description for the project (optional, for internal use only)</param>
+        </member>
+        <member name="M:GlobalCMSUmbraco.ExternalApi.Controllers.ProjectsApiController.ConfigureRealm(System.String)">
+             <summary>
+             Create Realm apps (Add Step 2)
+             </summary>
+             <remarks>
+             Call this endpoint to create the Realm Apps for this project. Please note that creating Realm Apps can take some time to complete.
+             A `200` response code is returned when the action has completed.
+            
+             Use the `GetOverview` endpoint if you want to check the status of the Realm Apps for this project before calling this endpoint.
+             </remarks>
+             <param name="projectCode">Project code, e.g. PR1234</param>
+        </member>
+        <member name="M:GlobalCMSUmbraco.ExternalApi.Controllers.ProjectsApiController.CreateRealmUser(System.String,System.Boolean,System.String)">
+            <summary>
+            Create Realm User (Add Step 3)
+            </summary>
+            <remarks>
+            Call this endpoint to create a MongoDb Realm user. 
+            For project setup this will need to be called TWICE (once with published true and once with published false)
+            A `200` response code is returned when the action has completed.
+            
+            Requires the Realm apps to have already been created (use the ConfigureRealm method)
+            </remarks>
+            <param name="projectCode">Project code, e.g. PR1234</param>
+            <param name="publishedApplication">True if the api key is for the published application. False if the api key is for the preview application</param>
+            <param name="userName">The name of the user, containing no spaces (optional)</param>
+        </member>
+        <member name="M:GlobalCMSUmbraco.ExternalApi.Controllers.ProjectsApiController.CloneStarterKit(System.String,System.String)">
+             <summary>
+             Add starting content for the project (Add Step 4)
+             </summary>
+             <remarks>
+             Call this endpoint to request the creation of the starting content for this project from a starter kit.
+             A `202` response code is returned when the request has been Accepted.
+            
+             The process is run as a background task. Use the `GetOverview` endpoint to check whether the process has completed: if the `HasContent` property is `true` then the content creation process has completed, so the next step can be run.
+            
+             Use the `GetStarterKits` endpoint to get the list of available starter kits.
+            
+             Use the `GetOverview` endpoint if you want to check whether this project already has content (starter kits cannot be used once content has been created)
+             </remarks>
+             <param name="projectCode">Project code, e.g. PR1234</param>
+             <param name="starterKitId">The Id of the chosen starter kit</param>
+        </member>
+        <member name="M:GlobalCMSUmbraco.ExternalApi.Controllers.ProjectsApiController.ConfigurePermissions(System.String,System.String,System.String)">
+             <summary>
+             Add a user for the project (Add Step 5)
+             </summary>
+             <remarks>
+             Call this endpoint to create a 'project' administrator user for this project.
+             A `200` response code is returned when the action has completed.
+            
+             Use the `GetOverview` endpoint if you want to check whether this project already has permissions configured. Permissions cannot be configured until after the project has some content.
+             </remarks>
+             <param name="projectCode">Project code, e.g. PR1234</param>
+             <param name="name">Display name of the Project Administrator</param>
+             <param name="email">Email address of the Project Administrator</param>
+        </member>
+        <member name="M:GlobalCMSUmbraco.ExternalApi.Controllers.ProjectsApiController.GetStarterKits">
+            <summary>
+            Get available starter kits
+            </summary>
+            <remarks>
+            This endpoint returns the available starter kits as an array with the following properties:
+            
+            - `Id`: the value that should be used when calling the `CloneStarterKit` endpoint
+            - `Name`: should be displayed to the user to make their selection
+            </remarks>
+        </member>
+        <member name="M:GlobalCMSUmbraco.ExternalApi.Controllers.ProjectsApiController.GetOverview(System.String)">
+            <summary>
+            Get project details and current status
+            </summary>
+            <remarks>
+            This endpoint returns all the key details for a project, plus flags for whether operations (e.g. Delete) can be done.
+            </remarks>
+            <param name="projectCode">Project code, e.g. PR1234</param>
+        </member>
+        <member name="M:GlobalCMSUmbraco.ExternalApi.Controllers.ProjectsApiController.GetSettings(System.String)">
+            <summary>
+            Get project's current settings
+            </summary>
+            <remarks>
+            This endpoint returns all configurable project settings:
+            - `DisplayName`: project description (optional, for internal use only)
+            - `FrontEndUrl`: url of the front-end website, e.g. https://domain.com
+            - `CmsMapsApiKey`: key to be used in the CMS for maps API for this project
+            - `FrontEndMapsApiKey`: key to be used in the front-end for maps API for this project
+            - `ApprovalEmailReminderMins`: frequency (in minutes) to send content approval email reminders to editors. Set to 0 to indicate no approval reminder emails should be sent. 
+            - `BrandName`: used in DCH image searching
+            </remarks>
+            <param name="projectCode">Project code, e.g. PR1234</param>
+        </member>
+        <member name="M:GlobalCMSUmbraco.ExternalApi.Controllers.ProjectsApiController.UpdateSettings(System.String,GlobalCMSUmbraco.ExternalApi.Models.ProjectSettings)">
+            <summary>
+            Save changes to project settings
+            </summary>
+            <remarks>
+            Call this endpoint to update the editable project settings.
+            A `200` response code is returned when the action has completed.
+            </remarks>
+            <param name="projectCode">Project code, e.g. PR1234</param>
+            <param name="settings">Object with updated project settings</param>
+        </member>
+        <member name="M:GlobalCMSUmbraco.ExternalApi.Controllers.ProjectsApiController.DeleteProject(System.String)">
+             <summary>
+             Delete this project
+             </summary>
+             <remarks>
+             Call this endpoint to delete the project. This can only be done if no content or users have been created already.
+             A `200` response code is returned when the action has completed.
+            
+             Use the `GetOverview` endpoint to check whether this project can be deleted.
+             </remarks>
+             <param name="projectCode">Project code, e.g. PR1234</param>
+        </member>
+        <member name="M:GlobalCMSUmbraco.ExternalApi.Controllers.TokenApiController.Generate(System.String)">
+             <summary>
+             Generate a bearer token to use for your API session
+             </summary>
+             <remarks>
+             If your API key is recognised a Json Web Token will be returned. This token should be saved and included in the header of all requests as `'Authorization: Bearer $TOKEN'`
+            
+             If your key is not recognised a `401` response code will be returned.
+             </remarks>
+             <param name="key">Your API key</param>
+             <returns>A JWT token if key was recognised</returns>
+        </member>
+        <member name="M:GlobalCMSUmbraco.ExternalApi.Controllers.TokenApiController.Confirm">
+            <summary>
+            Confirm if bearer token is authenticated
+            </summary>
+            <remarks>
+            Call this endpoint to test whether you have correctly set the authorization header.
+            If your headers are correctly set and your request is authorised a `200` response code will be returned.
+            Otherwise a `401` response code will be returned.
+            </remarks>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.RealmUser.UserId">
+            <summary>
+            The Id of the user
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.RealmUser.ApiKey">
+            <summary>
+            The API key (never retrievable after creation)
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.RealmUser.UserFriendlyName">
+            <summary>
+            A friendly name for the user
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.RealmUser.UserDisabled">
+            <summary>
+            If the user is diabled
+            </summary>
+        </member>
+        <member name="M:GlobalCMSUmbraco.ExternalApi.Models.RealmUser.FromRealmUserModel(GlobalCMSUmbraco.ProjectsSection.Models.Api.RealmUserModel)">
+            <summary>
+            Copy method
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectOverview.DisplayName">
+            <summary>
+            Display name for the project
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectOverview.CanBeDeleted">
+            <summary>
+            Can this project be deleted?
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectOverview.HasRealmApps">
+            <summary>
+            Does this project have Realm Apps?
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectOverview.MongoDbRealmPublishApp">
+            <summary>
+            MongoDb Realm App name for published items
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectOverview.MongoDbRealmPreviewApp">
+            <summary>
+            MongoDb Realm App name for preview (saved, not published) items
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectOverview.HasContent">
+            <summary>
+            True if this project already has some content (starter kits then not allowed to be used)
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectOverview.HasPermissions">
+            <summary>
+            True if this project already has a user group configured
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectOverview.FrontEndUrl">
+            <summary>
+            Url of the front-end website. Should be the root domain with scheme, e.g. https://domain.com
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectOverview.FeConfigFile">
+            <summary>
+            Url of the front-end config file e.g. api/config.json
+            </summary>
+        </member>
+        <member name="M:GlobalCMSUmbraco.ExternalApi.Models.ProjectOverview.FromProjectOverviewModel(GlobalCMSUmbraco.ProjectsSection.Models.Api.ProjectOverviewModel)">
+            <summary>
+            Copy method
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectSettings.DisplayName">
+            <summary>
+            Display name for the project
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectSettings.FrontEndUrl">
+            <summary>
+            Url of the front-end website. Should be the root domain with scheme, e.g. https://domain.com
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectSettings.FeConfigFile">
+            <summary>
+            Url of the front-end config file e.g. api/config.json
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectSettings.CmsMapsApiKey">
+            <summary>
+            Maps API key to be used in the CMS for this project
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectSettings.FrontEndMapsApiKey">
+            <summary>
+            Maps API key to be used in the front-end website
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectSettings.ApprovalEmailReminderMins">
+            <summary>
+            Frequency of approval email reminders (minutes). Set to 0 to not send reminders
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectSettings.BrandName">
+            <summary>
+            Used by DCH for filtering images
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectSettings.DchOverrideSettings">
+            <summary>
+            Toggle to allow the DCH api endpoint, client id and client secret to be overridden from within the CMS
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectSettings.DchClientId">
+            <summary>
+            Allow the DCH client id to be overridden from within the CMS
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectSettings.DchClientSecret">
+            <summary>
+            Allow the DCH client secret to be overridden from within the CMS
+            </summary>
+        </member>
+        <member name="P:GlobalCMSUmbraco.ExternalApi.Models.ProjectSettings.DchEndpointSecret">
+            <summary>
+            Allow the DCH endpoint to be overridden from within the CMS
+            </summary>
+        </member>
+    </members>
+</doc>

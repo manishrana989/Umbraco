@@ -1,0 +1,32 @@
+{
+  "collection": "Dictionary",
+  "database": "PRXXXX",
+  "roles": [
+    {
+      "name": "default",
+      "apply_when": {},
+      "read": true,
+      "insert": false,
+      "delete": false,
+      "search": true,
+      "additional_fields": {}
+    }
+  ],
+  "schema": {
+    "properties": {
+      "IsoCode": {
+        "bsonType": "string"
+      },
+      "ItemKey": {
+        "bsonType": "string"
+      },
+      "Value": {
+        "bsonType": "string"
+      },
+      "_id": {
+        "bsonType": "objectId"
+      }
+    },
+    "title": "DictionaryItems"
+  }
+}

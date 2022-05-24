@@ -1,0 +1,80 @@
+{
+  "collection": "Media",
+  "database": "PRXXXX",
+  "roles": [
+    {
+      "name": "default",
+      "apply_when": {},
+      "read": true,
+      "insert": false,
+      "delete": false,
+      "search": true,
+      "additional_fields": {}
+    }
+  ],
+  "schema": {
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "contentType": {
+        "bsonType": "string"
+      },
+      "fields": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "alias": {
+              "bsonType": "string"
+            },
+            "boolean": {
+              "bsonType": "bool"
+            },
+            "date": {
+              "bsonType": "date"
+            },
+            "decimal": {
+              "bsonType": "double"
+            },
+            "editor": {
+              "bsonType": "string"
+            },
+            "html": {
+              "bsonType": "string"
+            },
+            "number": {
+              "bsonType": "int"
+            },
+            "text": {
+              "bsonType": "string"
+            }
+          }
+        },
+        "title": "fieldsLevel1"
+      },
+      "key": {
+        "bsonType": "string"
+      },
+      "level": {
+        "bsonType": "int"
+      },
+      "mediaId": {
+        "bsonType": "int"
+      },
+      "sortOrder": {
+        "bsonType": "int"
+      },
+      "title": {
+        "bsonType": "string"
+      },
+      "updateDate": {
+        "bsonType": "date"
+      },
+      "url": {
+        "bsonType": "string"
+      }
+    },
+    "title": "Media"
+  }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>DCHMediaPicker</id>
+    <version>1.0.0</version>
+    <title>DCH Media Picker</title>
+    <authors>Dare</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>DCH Media Picker</description>
+  </metadata>
+   <files>
+    <file src="App_Plugins\**.**" target="content\App_Plugins" />
+    <file src="Config\**.**" target="content\" />
+  </files>
+</package>

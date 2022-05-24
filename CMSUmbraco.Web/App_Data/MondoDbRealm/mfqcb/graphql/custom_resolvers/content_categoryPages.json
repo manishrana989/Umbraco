@@ -1,0 +1,8 @@
+{
+  "field_name": "categoryPages",
+  "function_name": "categoryPagesResolver",
+  "input_type_format": "",
+  "on_type": "Content",
+  "payload_type": "Content",
+  "payload_type_format": "generated-list"
+}

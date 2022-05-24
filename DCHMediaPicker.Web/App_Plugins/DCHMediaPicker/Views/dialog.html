@@ -1,0 +1,156 @@
+﻿<div ng-controller="Dare.DCHMediaPicker.Dialog as vm">
+    <umb-editor-view>
+        <umb-editor-header name="model.title"
+                           name-locked="true"
+                           hide-alias="true"
+                           hide-icon="true"
+                           hide-description="true">
+        </umb-editor-header>
+
+        <umb-editor-container>
+            <umb-box>
+                <umb-box-content>
+                    <p class="tab-selector">
+                        <a href="" ng-click="vm.changeTab('basic')">Basic</a> |
+                        <a href="" ng-click="vm.changeTab('advanced')">Advanced</a> |
+                        <a href="" ng-click="vm.changeTab('collection')">Quick Search</a>
+                    </p>
+                </umb-box-content>
+
+                <umb-box-content ng-if="vm.tab == 'collection'">
+                        <umb-control-group label="Quick search">
+                            <select ng-model="model.collection" class="umb-property-editor">
+                                <option ng-repeat="collection in vm.collections" value='{{ collection }}'>{{ collection.name }}</option>
+                            </select>
+                        </umb-control-group>
+
+                        <umb-button type="button"
+                                    label="Search"
+                                    action="vm.search()">
+                        </umb-button>
+                        <umb-button type="link"
+                                    button-style="link"
+                                    label="Clear"
+                                    action="vm.clear()">
+                        </umb-button>
+                </umb-box-content>
+
+                <umb-box-content ng-if="vm.tab == 'advanced'" class="advanced-tab">
+                    <umb-control-group label="Search by asset id or asset name" class="advanced-control">
+                        <input type="text"
+                               placeholder="Enter search..."
+                               class="umb-property-editor umb-textstring"
+                               ng-model="model.searchTerms"
+                               ng-keyup="vm.keyup($event)" />
+                    </umb-control-group>
+
+                    <umb-control-group label="File type" class="advanced-control">
+                        <select ng-model="model.fileType" class="umb-property-editor">
+                            <option value="">Enter file type...</option>
+                            <option value="image/jpeg">image/jpeg</option>
+                            <option value="image/gif">image/gif</option>
+                            <option value="image/png">image/png</option>
+                            <option value="image/svg+xml">image/svg+xml</option>
+                            <option value="image/webp">image/webp</option>
+                            <option value="video/mp4">video/mp4</option>
+                        </select>
+                    </umb-control-group>
+
+                    <umb-control-group label="Keywords" class="advanced-control">
+                        <input type="text"
+                               placeholder="Enter keywords..."
+                               class="umb-property-editor umb-textstring"
+                               ng-model="model.keywords"
+                               ng-keyup="vm.keyup($event)" />
+                    </umb-control-group>
+
+                    <umb-control-group class="advanced-control">
+                    </umb-control-group>
+
+                    <umb-button type="button"
+                                label="Search"
+                                action="vm.search()">
+                    </umb-button>
+                    <umb-button type="link"
+                                button-style="link"
+                                label="Clear"
+                                action="vm.clear()">
+                    </umb-button>
+                </umb-box-content>
+
+                <umb-box-content ng-if="vm.tab == 'basic'">
+                    <umb-control-group label="Search by asset id or asset name">
+                        <input type="text"
+                               placeholder="Enter search..."
+                               class="umb-property-editor umb-textstring"
+                               ng-model="model.searchTerms"
+                               ng-keyup="vm.keyup($event)"
+                               umb-auto-focus />
+                    </umb-control-group>
+
+                    <umb-button type="button"
+                                label="Search"
+                                action="vm.search()">
+                    </umb-button>
+                    <umb-button type="link"
+                                button-style="link"
+                                label="Clear"
+                                action="vm.clear()">
+                    </umb-button>
+                </umb-box-content>
+
+                <umb-box-content>
+                    <umb-load-indicator ng-if="vm.loading"></umb-load-indicator>
+
+                    <p class="no-results" ng-if="vm.searched && vm.searchResults.Items.length == 0">No results found.</p>
+
+                    <ul ng-model="vm.searchResults" class="results">
+                        <li ng-repeat="searchResult in vm.searchResults.Items" class="result">
+                            <a href="{{searchResult.Url}}" target="_blank">
+                                <img ng-src="{{searchResult.Url}}" />
+                            </a>
+                            <label class="result-label">
+                                <span class="result-title">{{searchResult.Title}}</span>
+                                <span class="result-filename">{{searchResult.FileName}}</span>
+
+                                <span class="result-input-container">
+                                    <input type="radio" ng-model="model.selectedItem" name="dch-mediapicker-item" ng-value="{{searchResult}}" />
+                                    <span class="result-select">Select</span>
+                                </span>
+                            </label>
+                        </li>
+                    </ul>
+
+                    <ul ng-model="vm.paging" class="paging">
+                        <li ng-if="vm.currentPage > 1" class="page">
+                            <a href="" ng-click="vm.page(vm.currentPage - 1)">&lt; Prev</a>
+                        </li>
+                        <li ng-repeat="page in vm.paging" class="page">
+                            <a ng-if="page != vm.currentPage" href="" ng-click="vm.page(page)">{{page}}</a>
+                            <span class="current" ng-if="page == vm.currentPage">{{page}}</span>
+                        </li>
+                        <li ng-if="vm.currentPage < vm.paging.length" class="page">
+                            <a href="" ng-click="vm.page(vm.currentPage + 1)">Next &gt;</a>
+                        </li>
+                    </ul>
+                </umb-box-content>
+            </umb-box>
+        </umb-editor-container>
+
+        <umb-editor-footer>
+            <umb-editor-footer-content-right>
+                <umb-button type="button"
+                            label-key="general_close"
+                            shortcut="esc"
+                            action="vm.close()">
+                </umb-button>
+                <umb-button type="button"
+                            button-style="success"
+                            label-key="general_submit"
+                            state="vm.saveButtonState"
+                            action="vm.submit(model)">
+                </umb-button>
+            </umb-editor-footer-content-right>
+        </umb-editor-footer>
+    </umb-editor-view>
+</div>

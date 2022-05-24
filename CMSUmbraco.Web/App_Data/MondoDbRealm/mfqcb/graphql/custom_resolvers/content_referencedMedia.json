@@ -1,0 +1,8 @@
+{
+  "field_name": "referencedMedia",
+  "function_name": "referencedMediaResolver",
+  "input_type_format": "",
+  "on_type": "Content",
+  "payload_type": "Medium",
+  "payload_type_format": "generated-list"
+}
